@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>nxt - Link Shortener</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A privacy-first & open-source link shortener that's blazing fast 🔥"
+    />
+    <meta
+      name="keywords"
+      content="URL, Shortener, Link, nxt, Privacy-first, Open-source"
+    />
+    <meta name="theme-color" content="#ff4500" />
+    <meta name="author" content="nxt" />
+    <meta property="og:title" content="nxt - Link Shortener" />
+    <meta
+      property="og:description"
+      content="A privacy-first & open-source link shortener that's blazing fast 🔥"
+    />
+    <meta property="og:image" content="path/to/logo.png" />
+    <meta property="og:url" content="https://nxt.mom" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="/assets/css/nxt.css" rel="stylesheet" />
+    <script src="/assets/js/nxt.js"></script>
+  </head>
+  <body class="flex items-center justify-center h-screen">
+    <div
+      id="card"
+      class="glass container mx-auto px-4 py-8 max-w-md text-center"
+    >
+      <script>
+        var domain = window.location.hostname;
+      </script>
+      <h1 class="text-4xl font-bold mb-8 text-gray-600">
+        <span id="domainTitle" style="color: #ff4500">nxt.mom</span>
+        <span id="uploads" class="text-gray-600"></span>
+      </h1>
+      <p class="mb-8 text-gray-400">
+        A privacy-first & open-source link shortener that's blazing fast 🔥
+      </p>
+      <form id="shortenForm" onsubmit="event.preventDefault(); onSubmit()">
+        <div class="flex items-center border-b border-teal-500 py-2">
+          <input
+            id="url"
+            class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="text"
+            placeholder="Enter URL"
+            aria-label="Enter URL"
+            name="url"
+            required
+          />
+          <input
+            id="passcode"
+            class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+            type="hidden"
+            name="passcode"
+          />
+          <button
+            id="actionButton"
+            class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+            type="button"
+            onclick="onSubmit()"
+          >
+            Shorten
+          </button>
+        </div>
+      </form>
+      <div class="mt-8">
+        <a href="/privacy.html" class="text-orange-500 hover:underline"
+          >Privacy</a
+        >
+        <span class="mx-2 text-orange-700">-</span>
+        <a href="/tos.html" class="text-orange-500 hover:underline">TOS</a>
+        <span class="mx-2 text-orange-700">-</span>
+        <a href="/docs.html" class="text-orange-500 hover:underline">API</a>
+        <span class="mx-2 text-orange-700">-</span>
+        <a
+          href="https://github.com/abcdan/nxt"
+          class="text-orange-500 hover:underline"
+          target="_blank"
+          >GitHub</a
+        >
+        <span class="mx-2 text-orange-700">-</span>
+        <a
+          href="https://railway.app/template/gSvwgO?referralCode=QsZ-bg"
+          class="text-orange-500 hover:underline"
+          target="_blank"
+          >Host on Railway</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
